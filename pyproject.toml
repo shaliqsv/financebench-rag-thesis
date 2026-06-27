@@ -1,0 +1,13 @@
+[project]
+name = "financebench-thesis"
+version = "0.1.0"
+description = "Vector RAG vs. Vectorless RAG vs. Long-Context LLMs on FinanceBench"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "python-dotenv>=1.0",
+    "google-genai>=0.3",
+    "anthropic>=0.40",
+    "openai>=1.50",
+    "voyageai>=0.3",
+]
