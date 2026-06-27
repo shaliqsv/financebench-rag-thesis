@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+.idea/
+.vscode/
+
+# external reference repos (cloned, not vendored into this repo)
+external/
+
+# raw experiment outputs can be large; keep structure, not contents
+experiments/results/*
+!experiments/results/.gitkeep
