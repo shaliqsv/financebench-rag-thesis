@@ -9,6 +9,16 @@ __pycache__/
 # external reference repos (cloned, not vendored into this repo)
 external/
 
-# raw experiment outputs can be large; keep structure, not contents
+# raw experiment outputs can be large; keep structure, not contents by default —
+# BUT the vector RAG indexes/embeddings/results are expensive to recompute
+# (hours of GPU indexing + paid API calls), so those specifically ARE tracked,
+# to let `git pull` on this local clone fetch already-computed artifacts from
+# the Colab-side run instead of needing to rerun them. See the "sync artifacts"
+# cells in pipelines/vector_rag/vector_rag_pipeline.ipynb.
 experiments/results/*
 !experiments/results/.gitkeep
+!experiments/results/vector_rag_index/
+!experiments/results/vector_rag_index/**
+!experiments/results/vector_rag_costs.jsonl
+!experiments/results/vector_rag_results.jsonl
+.DS_Store
