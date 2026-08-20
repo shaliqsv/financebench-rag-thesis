@@ -13,11 +13,11 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 
 PRICING_PER_MILLION_TOKENS: dict[str, dict[str, float | None]] = {
-    "gemini-2.5-flash": {"input": None, "output": None},
+    "gemini-3.5-flash": {"input": None, "output": None},
     "deepseek-v4": {"input": None, "output": None},
     "voyage-rerank-2": {"input": None, "output": None},
     "stella-en-1.5b-v5": {"input": None, "output": None},
-    "claude-judge": {"input": None, "output": None},
+    "openai/gpt-oss-120b": {"input": None, "output": None},  # judge, via Groq (free tier)
 }
 
 

@@ -43,7 +43,7 @@ Master's thesis at Philipps-Universität Marburg, supervised by Prof. Dr. Daniel
 ---
 
 ## Generation Models (used across all three pipelines)
-- **Gemini 2.5 Flash** (Google)
+- **Gemini 3.5 Flash** (Google) — originally Gemini 2.5 Flash per the brief, but that model was deprecated for new API keys/projects by the time experiments started (Aug 2026). Substituted with a pinned current version rather than `gemini-flash-latest`, to keep results reproducible/citable.
 - **DeepSeek V4** (DeepSeek)
 
 Both chosen for: 1M token context windows, manageable API costs (self-funded project).
@@ -76,7 +76,7 @@ df_full = pd.merge(df_questions, df_meta, on="doc_name")
 - Three categories: Correct / Incorrect / Failure to Answer (Islam et al. scheme)
 - Numerical questions: deterministic matching first (handle "1.2 billion" vs "1,200 million", small rounding)
 - If deterministic fails or question is descriptive: LLM-as-a-judge
-- Judge model: Claude (different family from Gemini and DeepSeek, reduces self-enhancement bias)
+- Judge model: openai/gpt-oss-120b via Groq (originally Claude per the brief, but Claude's API requires billing — switched to Groq's free tier. Llama 3.3 70B was the first Groq pick but Groq deprecated it entirely before this got used; gpt-oss-120b is what's actually live on the free tier. Still satisfies the "different family from Gemini and DeepSeek" requirement that reduces self-enhancement bias; DeepSeek R1 was considered and rejected since it's the same vendor as the DeepSeek V4 generation model)
 - Spot-check 10-15% of judge outputs manually
 
 ### Retrieval Quality (vector RAG and vectorless RAG only)

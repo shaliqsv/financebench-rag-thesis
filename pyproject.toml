@@ -16,6 +16,8 @@ dependencies = [
     "rank-bm25>=0.2.2",
     "nltk>=3.10.0",
     "tiktoken>=0.13.0",
+    "pyarrow>=25.0.0",
+    "groq>=1.6.0",
 ]
 
 [dependency-groups]
