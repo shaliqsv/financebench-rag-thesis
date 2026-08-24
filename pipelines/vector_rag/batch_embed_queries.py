@@ -16,6 +16,7 @@ import json
 import time
 import traceback
 from pathlib import Path
+from typing import Callable
 
 import numpy as np
 import pandas as pd
@@ -43,6 +44,8 @@ def embed_all_queries(
     expansion_model: str,
     queries_dir: Path,
     cost_tracker,
+    sync_every: int | None = None,
+    sync_fn: Callable[[], None] | None = None,
 ) -> dict:
     """Resumable batch driver: expand + embed every question's query.
 
@@ -50,10 +53,15 @@ def embed_all_queries(
     question (e.g. a malformed expansion response) is logged and skipped
     rather than aborting the whole batch — check
     queries_dir/embedding_errors.log afterward for a nonzero failure count.
+
+    If sync_fn is given, it's called after every sync_every newly-embedded
+    queries (and once more at the end, if anything new happened since the
+    last call) — see indexing.index_all_documents for the same pattern.
     """
     queries_dir.mkdir(parents=True, exist_ok=True)
     errors_log = queries_dir / "embedding_errors.log"
     results = {"embedded": [], "skipped": [], "failed": []}
+    synced_through = 0
 
     for i, row in enumerate(df.itertuples(), start=1):
         fb_id = row.financebench_id
@@ -89,6 +97,15 @@ def embed_all_queries(
             with errors_log.open("a") as f:
                 f.write(f"{fb_id}\t{e}\n{traceback.format_exc()}\n---\n")
             results["failed"].append(fb_id)
+
+        if sync_fn is not None and sync_every and len(results["embedded"]) - synced_through >= sync_every:
+            print(f"    -- syncing after {len(results['embedded'])} newly embedded queries --")
+            sync_fn()
+            synced_through = len(results["embedded"])
+
+    if sync_fn is not None and len(results["embedded"]) > synced_through:
+        print(f"    -- final sync ({len(results['embedded'])} newly embedded queries total) --")
+        sync_fn()
 
     print(
         f"\nQuery embedding summary: {len(results['embedded'])} embedded, "
