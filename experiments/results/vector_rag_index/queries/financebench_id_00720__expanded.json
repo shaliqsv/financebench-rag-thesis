@@ -1,0 +1,6 @@
+{
+  "financebench_id": "financebench_id_00720",
+  "doc_name": "AMERICANEXPRESS_2022_10K",
+  "tag": "expanded",
+  "query_text": "Gross margin is not a applicable metric for financial services companies like American Express because they do not report Cost of Goods Sold (COGS) or gross profit. Instead, profitability is driven by net interest income and noninterest revenues. \n\n\"American Express\" OR \"AXP\" AND (\"FY2022\" OR \"2022\" OR \"Year Ended December 31, 2022\") AND (\"total revenues net of interest expense\" OR \"net interest income\" OR \"net interest yield\" OR \"net interest margin\" OR \"noninterest revenues\" OR \"provisions for credit losses\" OR \"noninterest expense\") AND (\"drivers\" OR \"change\" OR \"variance\" OR \"increased\" OR \"decreased\" OR \"growth\")"
+}
