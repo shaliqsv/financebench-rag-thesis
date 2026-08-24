@@ -24,6 +24,12 @@ import pandas as pd
 from pipelines.vector_rag.generation import expand_query
 from pipelines.vector_rag.indexing import format_query
 
+# Gemini free tier caps at 10 requests/minute; expand_query makes one call per
+# question, so pacing each iteration to at least this long keeps the loop under
+# that cap instead of bursting and eating with_retry's 429 backoff penalty on
+# every other question. 6.5s -> ~9.2 req/min, a small margin under the cap.
+MIN_SECONDS_BETWEEN_CALLS = 6.5
+
 
 def query_paths(queries_dir: Path, financebench_id: str) -> tuple[Path, Path]:
     return (
@@ -97,6 +103,8 @@ def embed_all_queries(
             with errors_log.open("a") as f:
                 f.write(f"{fb_id}\t{e}\n{traceback.format_exc()}\n---\n")
             results["failed"].append(fb_id)
+
+        time.sleep(max(0.0, MIN_SECONDS_BETWEEN_CALLS - (time.time() - t0)))
 
         if sync_fn is not None and sync_every and len(results["embedded"]) - synced_through >= sync_every:
             print(f"    -- syncing after {len(results['embedded'])} newly embedded queries --")
