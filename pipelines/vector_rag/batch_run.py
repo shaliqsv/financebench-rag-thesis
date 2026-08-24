@@ -53,18 +53,25 @@ def run_all_questions(
     generation_model: str,
     judge_model: str,
     cost_tracker,
-    top_k_hybrid: int = 20,
+    top_k_hybrid: int = 10,
     top_k_rerank: int = 10,
+    sync_every: int | None = None,
+    sync_fn=None,
 ) -> dict:
     """df must have: financebench_id, doc_name, question, answer, evidence.
 
     Appends one JSON line per question to out_path as soon as it finishes, so
     an interrupted run loses at most the one in-flight question, and re-running
     this function skips every financebench_id already present in out_path.
+
+    If sync_fn is given, it's called after every sync_every newly-completed
+    questions (and once more at the end, if anything new happened since the
+    last call) — see indexing.index_all_documents for the same pattern.
     """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     errors_log = out_path.parent / "run_errors.log"
     completed = _load_completed_ids(out_path)
+    synced_through = 0
 
     doc_cache: dict[str, tuple] = {}  # doc_name -> (chunks_df, dense_embeddings, bm25_index)
     results = {"done": [], "skipped": [], "failed": [], "missing_index": [], "missing_query": []}
@@ -167,6 +174,15 @@ def run_all_questions(
             with errors_log.open("a") as f:
                 f.write(f"{fb_id}\t{e}\n{traceback.format_exc()}\n---\n")
             results["failed"].append(fb_id)
+
+        if sync_fn is not None and sync_every and len(results["done"]) - synced_through >= sync_every:
+            print(f"    -- syncing after {len(results['done'])} newly completed questions --")
+            sync_fn()
+            synced_through = len(results["done"])
+
+    if sync_fn is not None and len(results["done"]) > synced_through:
+        print(f"    -- final sync ({len(results['done'])} newly completed questions total) --")
+        sync_fn()
 
     print(
         f"\nRun summary: {len(results['done'])} done, {len(results['skipped'])} already done, "

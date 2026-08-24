@@ -92,6 +92,8 @@ def index_all_documents(
     count_tokens: Callable[[str], int],
     index_dir: Path,
     batch_size: int = 8,
+    sync_every: int | None = None,
+    sync_fn: Callable[[], None] | None = None,
 ) -> dict:
     """Resumable batch driver: index every doc in doc_names not already saved.
 
@@ -99,9 +101,16 @@ def index_all_documents(
     caught, logged to index_dir/indexing_errors.log, and skipped — check that
     file after the run finishes to see whether the failure count is nonzero.
     Safe to re-run after an interruption: already-indexed docs are skipped.
+
+    If sync_fn is given, it's called after every sync_every newly-indexed docs
+    (and once more at the end, if anything new happened since the last call) —
+    e.g. to push index_dir to GitHub mid-run, so a dropped Colab connection
+    loses at most sync_every docs' worth of indexing instead of the whole run.
+    sync_every is ignored if sync_fn is None.
     """
     errors_log = index_dir / "indexing_errors.log"
     results = {"indexed": [], "skipped": [], "failed": []}
+    synced_through = 0
 
     for i, doc_name in enumerate(doc_names, start=1):
         if is_indexed(index_dir, doc_name):
@@ -121,6 +130,15 @@ def index_all_documents(
             with errors_log.open("a") as f:
                 f.write(f"{doc_name}\t{e}\n{traceback.format_exc()}\n---\n")
             results["failed"].append(doc_name)
+
+        if sync_fn is not None and sync_every and len(results["indexed"]) - synced_through >= sync_every:
+            print(f"    -- syncing after {len(results['indexed'])} newly indexed docs --")
+            sync_fn()
+            synced_through = len(results["indexed"])
+
+    if sync_fn is not None and len(results["indexed"]) > synced_through:
+        print(f"    -- final sync ({len(results['indexed'])} newly indexed docs total) --")
+        sync_fn()
 
     print(
         f"\nIndexing summary: {len(results['indexed'])} indexed, "

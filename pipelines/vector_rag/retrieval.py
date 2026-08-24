@@ -13,6 +13,13 @@ from pipelines.vector_rag.indexing import bm25_tokenize
 
 ALPHA_DENSE = 0.85  # dense weight, per Kim et al.
 
+# Kim et al. specify top_k=20 for the hybrid stage (reranked down to 10), but the
+# Voyage account has no payment method yet, so it's capped at the free tier's
+# ~10K-tokens/minute limit -- a 20-chunk candidate set routinely exceeds that and
+# 429s every call. Defaulting to 10 here keeps runs free; bump back to 20 (matching
+# the paper) once billing is added on Voyage, and note the change either way in the
+# thesis methodology section.
+
 
 def hybrid_retrieve(
     chunks_df: pd.DataFrame,
@@ -20,7 +27,7 @@ def hybrid_retrieve(
     bm25_index,
     query_vec: np.ndarray,
     expanded_query: str,
-    top_k: int = 20,
+    top_k: int = 10,
     alpha: float = ALPHA_DENSE,
 ) -> pd.DataFrame:
     """hybrid = alpha * dense_cosine + (1 - alpha) * bm25_minmax_normalized.
