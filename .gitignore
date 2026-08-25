@@ -20,5 +20,9 @@ experiments/results/*
 !experiments/results/vector_rag_index/
 !experiments/results/vector_rag_index/**
 !experiments/results/vector_rag_costs.jsonl
-!experiments/results/vector_rag_results.jsonl
+!experiments/results/vector_rag_stage_hybrid.jsonl
+!experiments/results/vector_rag_stage_rerank.jsonl
+!experiments/results/vector_rag_stage_selection.jsonl
+!experiments/results/vector_rag_stage_generation.jsonl
+!experiments/results/vector_rag_stage_scoring.jsonl
 .DS_Store
