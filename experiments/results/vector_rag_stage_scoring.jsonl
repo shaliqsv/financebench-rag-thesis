@@ -28,3 +28,18 @@
 {"financebench_id": "financebench_id_01936", "doc_name": "AMCOR_2023Q2_10Q", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001656.2435782}
 {"financebench_id": "financebench_id_01928", "doc_name": "AMCOR_2023Q4_EARNINGS", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001656.2460124}
 {"financebench_id": "financebench_id_01930", "doc_name": "AMCOR_2023Q4_EARNINGS", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001656.2482536}
+{"financebench_id": "financebench_id_03069", "doc_name": "AMD_2015_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001657.8192716}
+{"financebench_id": "financebench_id_00222", "doc_name": "AMD_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001657.8220978}
+{"financebench_id": "financebench_id_00995", "doc_name": "AMD_2022_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001658.6663647}
+{"financebench_id": "financebench_id_01198", "doc_name": "AMD_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001658.668773}
+{"financebench_id": "financebench_id_00917", "doc_name": "AMD_2022_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001659.1500068}
+{"financebench_id": "financebench_id_01279", "doc_name": "AMD_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001659.1522963}
+{"financebench_id": "financebench_id_00563", "doc_name": "AMD_2022_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001659.608403}
+{"financebench_id": "financebench_id_00757", "doc_name": "AMD_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001659.6107676}
+{"financebench_id": "financebench_id_00476", "doc_name": "AMERICANEXPRESS_2022_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001660.0912457}
+{"financebench_id": "financebench_id_01028", "doc_name": "AMERICANEXPRESS_2022_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001660.5449913}
+{"financebench_id": "financebench_id_00723", "doc_name": "AMERICANEXPRESS_2022_10K", "score_label": "Failure to Answer", "score_method": "llm_judge", "timestamp": 1788001661.2325842}
+{"financebench_id": "financebench_id_00720", "doc_name": "AMERICANEXPRESS_2022_10K", "score_label": "Failure to Answer", "score_method": "llm_judge", "timestamp": 1788001661.8326108}
+{"financebench_id": "financebench_id_01351", "doc_name": "AMERICANEXPRESS_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001661.8354375}
+{"financebench_id": "financebench_id_01964", "doc_name": "AMERICANEXPRESS_2022_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001662.1603487}
+{"financebench_id": "financebench_id_01981", "doc_name": "AMERICANEXPRESS_2022_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001662.737903}
