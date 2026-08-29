@@ -13,3 +13,18 @@
 {"financebench_id": "financebench_id_03856", "doc_name": "ADOBE_2017_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001652.6227474}
 {"financebench_id": "financebench_id_00438", "doc_name": "ADOBE_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001652.624416}
 {"financebench_id": "financebench_id_00591", "doc_name": "ADOBE_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001652.6259208}
+{"financebench_id": "financebench_id_01319", "doc_name": "AES_2022_10K", "score_label": "Failure to Answer", "score_method": "llm_judge", "timestamp": 1788001654.8547378}
+{"financebench_id": "financebench_id_00540", "doc_name": "AES_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001654.857232}
+{"financebench_id": "financebench_id_10420", "doc_name": "AES_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001654.8595378}
+{"financebench_id": "financebench_id_06655", "doc_name": "AMAZON_2017_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001654.861888}
+{"financebench_id": "financebench_id_08135", "doc_name": "AMAZON_2017_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001654.8639512}
+{"financebench_id": "financebench_id_08286", "doc_name": "AMAZON_2019_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001654.8659637}
+{"financebench_id": "financebench_id_03882", "doc_name": "AMCOR_2020_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001654.8679895}
+{"financebench_id": "financebench_id_01935", "doc_name": "AMCOR_2022_8K_dated-2022-07-01", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001655.7938201}
+{"financebench_id": "financebench_id_00799", "doc_name": "AMCOR_2023_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001655.7958257}
+{"financebench_id": "financebench_id_01079", "doc_name": "AMCOR_2023_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001655.797653}
+{"financebench_id": "financebench_id_01148", "doc_name": "AMCOR_2023_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001656.2241526}
+{"financebench_id": "financebench_id_00684", "doc_name": "AMCOR_2023_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001656.226569}
+{"financebench_id": "financebench_id_01936", "doc_name": "AMCOR_2023Q2_10Q", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001656.2435782}
+{"financebench_id": "financebench_id_01928", "doc_name": "AMCOR_2023Q4_EARNINGS", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001656.2460124}
+{"financebench_id": "financebench_id_01930", "doc_name": "AMCOR_2023Q4_EARNINGS", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001656.2482536}
