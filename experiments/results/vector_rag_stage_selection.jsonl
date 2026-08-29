@@ -13,3 +13,18 @@
 {"financebench_id": "financebench_id_00438", "doc_name": "ADOBE_2022_10K", "selected_chunk_ids": ["ADOBE_2022_10K__p0053_c00", "ADOBE_2022_10K__p0042_c01"], "n_candidates": 10, "timestamp": 1787997361.4870121}
 {"financebench_id": "financebench_id_00591", "doc_name": "ADOBE_2022_10K", "selected_chunk_ids": ["ADOBE_2022_10K__p0056_c00", "ADOBE_2022_10K__p0046_c00", "ADOBE_2022_10K__p0039_c01"], "n_candidates": 10, "timestamp": 1787997370.605144}
 {"financebench_id": "financebench_id_01319", "doc_name": "AES_2022_10K", "selected_chunk_ids": ["AES_2022_10K__p0208_c00"], "n_candidates": 10, "timestamp": 1787997375.0395412}
+{"financebench_id": "financebench_id_00540", "doc_name": "AES_2022_10K", "selected_chunk_ids": ["AES_2022_10K__p0129_c00", "AES_2022_10K__p0148_c01", "AES_2022_10K__p0139_c01"], "n_candidates": 10, "timestamp": 1787997382.875732}
+{"financebench_id": "financebench_id_10420", "doc_name": "AES_2022_10K", "selected_chunk_ids": ["AES_2022_10K__p0083_c00", "AES_2022_10K__p0083_c01"], "n_candidates": 10, "timestamp": 1787997389.518362}
+{"financebench_id": "financebench_id_06655", "doc_name": "AMAZON_2017_10K", "selected_chunk_ids": ["AMAZON_2017_10K__p0039_c00", "AMAZON_2017_10K__p0037_c00"], "n_candidates": 10, "timestamp": 1787997403.6149464}
+{"financebench_id": "financebench_id_08135", "doc_name": "AMAZON_2017_10K", "selected_chunk_ids": ["AMAZON_2017_10K__p0024_c01"], "n_candidates": 10, "timestamp": 1787997405.1446946}
+{"financebench_id": "financebench_id_08286", "doc_name": "AMAZON_2019_10K", "selected_chunk_ids": ["AMAZON_2019_10K__p0066_c01"], "n_candidates": 10, "timestamp": 1787997419.4884253}
+{"financebench_id": "financebench_id_01935", "doc_name": "AMCOR_2022_8K_dated-2022-07-01", "selected_chunk_ids": ["AMCOR_2022_8K_dated-2022-07-01__p0001_c01"], "n_candidates": 10, "timestamp": 1787997444.0221276}
+{"financebench_id": "financebench_id_00799", "doc_name": "AMCOR_2023_10K", "selected_chunk_ids": ["AMCOR_2023_10K__p0051_c00", "AMCOR_2023_10K__p0051_c01"], "n_candidates": 10, "timestamp": 1787997451.1467047}
+{"financebench_id": "financebench_id_01079", "doc_name": "AMCOR_2023_10K", "selected_chunk_ids": ["AMCOR_2023_10K__p0063_c00"], "n_candidates": 10, "timestamp": 1787997459.916956}
+{"financebench_id": "financebench_id_01148", "doc_name": "AMCOR_2023_10K", "selected_chunk_ids": ["AMCOR_2023_10K__p0054_c00"], "n_candidates": 10, "timestamp": 1787997474.488738}
+{"financebench_id": "financebench_id_00684", "doc_name": "AMCOR_2023_10K", "selected_chunk_ids": ["AMCOR_2023_10K__p0032_c00", "AMCOR_2023_10K__p0032_c01"], "n_candidates": 10, "timestamp": 1787997488.6085136}
+{"financebench_id": "financebench_id_01936", "doc_name": "AMCOR_2023Q2_10Q", "selected_chunk_ids": ["AMCOR_2023Q2_10Q__p0014_c00"], "n_candidates": 10, "timestamp": 1787997489.3397255}
+{"financebench_id": "financebench_id_01928", "doc_name": "AMCOR_2023Q4_EARNINGS", "selected_chunk_ids": ["AMCOR_2023Q4_EARNINGS__p0011_c00"], "n_candidates": 10, "timestamp": 1787997514.6453335}
+{"financebench_id": "financebench_id_01930", "doc_name": "AMCOR_2023Q4_EARNINGS", "selected_chunk_ids": ["AMCOR_2023Q4_EARNINGS__p0002_c00", "AMCOR_2023Q4_EARNINGS__p0009_c00"], "n_candidates": 10, "timestamp": 1787997516.0157583}
+{"financebench_id": "financebench_id_03069", "doc_name": "AMD_2015_10K", "selected_chunk_ids": ["AMD_2015_10K__p0059_c00", "AMD_2015_10K__p0055_c00"], "n_candidates": 10, "timestamp": 1787997529.4160225}
+{"financebench_id": "financebench_id_00222", "doc_name": "AMD_2022_10K", "selected_chunk_ids": ["AMD_2022_10K__p0055_c00"], "n_candidates": 10, "timestamp": 1787997531.331658}
