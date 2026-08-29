@@ -145,3 +145,6 @@
 {"financebench_id": "financebench_id_06247", "doc_name": "WALMART_2018_10K", "selected_chunk_ids": ["WALMART_2018_10K__p0058_c00", "WALMART_2018_10K__p0056_c00"], "n_candidates": 10, "timestamp": 1787998767.3175871}
 {"financebench_id": "financebench_id_04784", "doc_name": "WALMART_2019_10K", "selected_chunk_ids": ["WALMART_2019_10K__p0033_c02"], "n_candidates": 10, "timestamp": 1787998794.2165606}
 {"financebench_id": "financebench_id_06741", "doc_name": "WALMART_2020_10K", "selected_chunk_ids": ["WALMART_2020_10K__p0050_c00", "WALMART_2020_10K__p0055_c00"], "n_candidates": 10, "timestamp": 1787998795.807941}
+{"financebench_id": "financebench_id_01226", "doc_name": "3M_2022_10K", "selected_chunk_ids": ["3M_2022_10K__p0019_c01", "3M_2022_10K__p0020_c00"], "n_candidates": 10, "timestamp": 1788001312.5498314}
+{"financebench_id": "financebench_id_03882", "doc_name": "AMCOR_2020_10K", "selected_chunk_ids": ["AMCOR_2020_10K__p0049_c00"], "n_candidates": 10, "timestamp": 1788001318.9589584}
+{"financebench_id": "financebench_id_01964", "doc_name": "AMERICANEXPRESS_2022_10K", "selected_chunk_ids": ["AMERICANEXPRESS_2022_10K__p0097_c01"], "n_candidates": 10, "timestamp": 1788001325.329805}
