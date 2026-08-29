@@ -103,3 +103,18 @@
 {"financebench_id": "financebench_id_03718", "doc_name": "LOCKHEEDMARTIN_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001672.2328348}
 {"financebench_id": "financebench_id_04171", "doc_name": "MGMRESORTS_2018_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001672.2351327}
 {"financebench_id": "financebench_id_03849", "doc_name": "MGMRESORTS_2020_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001672.237533}
+{"financebench_id": "financebench_id_01254", "doc_name": "MGMRESORTS_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001673.8713837}
+{"financebench_id": "financebench_id_00382", "doc_name": "MGMRESORTS_2022Q4_EARNINGS", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001674.353081}
+{"financebench_id": "financebench_id_01911", "doc_name": "MGMRESORTS_2022Q4_EARNINGS", "score_label": "Failure to Answer", "score_method": "llm_judge", "timestamp": 1788001677.9698792}
+{"financebench_id": "financebench_id_01912", "doc_name": "MGMRESORTS_2022Q4_EARNINGS", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001677.9723997}
+{"financebench_id": "financebench_id_00407", "doc_name": "MGMRESORTS_2023Q2_10Q", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001680.4988058}
+{"financebench_id": "financebench_id_04700", "doc_name": "MICROSOFT_2016_10K", "score_label": "Failure to Answer", "score_method": "llm_judge", "timestamp": 1788001683.903216}
+{"financebench_id": "financebench_id_00552", "doc_name": "MICROSOFT_2023_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001683.9057264}
+{"financebench_id": "financebench_id_04458", "doc_name": "NETFLIX_2015_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001683.908428}
+{"financebench_id": "financebench_id_03282", "doc_name": "NETFLIX_2017_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001683.91087}
+{"financebench_id": "financebench_id_04302", "doc_name": "NIKE_2018_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001683.9130282}
+{"financebench_id": "financebench_id_03531", "doc_name": "NIKE_2019_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001683.9151182}
+{"financebench_id": "financebench_id_04080", "doc_name": "NIKE_2021_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001683.9171236}
+{"financebench_id": "financebench_id_01163", "doc_name": "NIKE_2023_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788001686.4928029}
+{"financebench_id": "financebench_id_00080", "doc_name": "PAYPAL_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788001686.4951746}
+{"financebench_id": "financebench_id_04980", "doc_name": "PEPSICO_2021_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788001686.497319}
