@@ -133,3 +133,15 @@
 {"financebench_id": "financebench_id_02419", "doc_name": "Pfizer_2023Q2_10Q", "selected_chunk_ids": ["Pfizer_2023Q2_10Q__p0040_c01"], "n_candidates": 10, "timestamp": 1787998602.2313669}
 {"financebench_id": "financebench_id_00746", "doc_name": "ULTABEAUTY_2023_10K", "selected_chunk_ids": ["ULTABEAUTY_2023_10K__p0000_c01"], "n_candidates": 10, "timestamp": 1787998623.6117587}
 {"financebench_id": "financebench_id_00521", "doc_name": "ULTABEAUTY_2023_10K", "selected_chunk_ids": ["ULTABEAUTY_2023_10K__p0058_c00", "ULTABEAUTY_2023_10K__p0033_c00", "ULTABEAUTY_2023_10K__p0005_c00"], "n_candidates": 10, "timestamp": 1787998666.9264345}
+{"financebench_id": "financebench_id_00601", "doc_name": "ULTABEAUTY_2023Q4_EARNINGS", "selected_chunk_ids": ["ULTABEAUTY_2023Q4_EARNINGS__p0001_c02"], "n_candidates": 10, "timestamp": 1787998669.6906874}
+{"financebench_id": "financebench_id_00603", "doc_name": "ULTABEAUTY_2023Q4_EARNINGS", "selected_chunk_ids": ["ULTABEAUTY_2023Q4_EARNINGS__p0002_c00"], "n_candidates": 10, "timestamp": 1787998676.5945058}
+{"financebench_id": "financebench_id_00605", "doc_name": "ULTABEAUTY_2023Q4_EARNINGS", "selected_chunk_ids": ["ULTABEAUTY_2023Q4_EARNINGS__p0002_c00"], "n_candidates": 10, "timestamp": 1787998704.6984248}
+{"financebench_id": "financebench_id_00606", "doc_name": "ULTABEAUTY_2023Q4_EARNINGS", "selected_chunk_ids": ["ULTABEAUTY_2023Q4_EARNINGS__p0001_c02"], "n_candidates": 10, "timestamp": 1787998715.3889925}
+{"financebench_id": "financebench_id_00859", "doc_name": "VERIZON_2021_10K", "selected_chunk_ids": ["VERIZON_2021_10K__p0084_c01"], "n_candidates": 10, "timestamp": 1787998727.9173086}
+{"financebench_id": "financebench_id_02024", "doc_name": "VERIZON_2021_10K", "selected_chunk_ids": ["VERIZON_2021_10K__p0093_c00"], "n_candidates": 10, "timestamp": 1787998729.2163088}
+{"financebench_id": "financebench_id_00216", "doc_name": "VERIZON_2022_10K", "selected_chunk_ids": ["VERIZON_2022_10K__p0055_c00", "VERIZON_2022_10K__p0104_c01"], "n_candidates": 10, "timestamp": 1787998735.5737565}
+{"financebench_id": "financebench_id_00215", "doc_name": "VERIZON_2022_10K", "selected_chunk_ids": ["VERIZON_2022_10K__p0020_c00", "VERIZON_2022_10K__p0038_c00", "VERIZON_2022_10K__p0018_c00"], "n_candidates": 10, "timestamp": 1787998741.8869631}
+{"financebench_id": "financebench_id_00566", "doc_name": "VERIZON_2022_10K", "selected_chunk_ids": ["VERIZON_2022_10K__p0076_c01"], "n_candidates": 10, "timestamp": 1787998749.9748065}
+{"financebench_id": "financebench_id_06247", "doc_name": "WALMART_2018_10K", "selected_chunk_ids": ["WALMART_2018_10K__p0058_c00", "WALMART_2018_10K__p0056_c00"], "n_candidates": 10, "timestamp": 1787998767.3175871}
+{"financebench_id": "financebench_id_04784", "doc_name": "WALMART_2019_10K", "selected_chunk_ids": ["WALMART_2019_10K__p0033_c02"], "n_candidates": 10, "timestamp": 1787998794.2165606}
+{"financebench_id": "financebench_id_06741", "doc_name": "WALMART_2020_10K", "selected_chunk_ids": ["WALMART_2020_10K__p0050_c00", "WALMART_2020_10K__p0055_c00"], "n_candidates": 10, "timestamp": 1787998795.807941}
