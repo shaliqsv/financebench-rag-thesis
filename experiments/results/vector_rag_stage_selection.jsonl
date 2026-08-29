@@ -58,3 +58,18 @@
 {"financebench_id": "financebench_id_00517", "doc_name": "BOEING_2022_10K", "selected_chunk_ids": ["BOEING_2022_10K__p0061_c00"], "n_candidates": 10, "timestamp": 1787997852.2827635}
 {"financebench_id": "financebench_id_01091", "doc_name": "BOEING_2022_10K", "selected_chunk_ids": ["BOEING_2022_10K__p0112_c00"], "n_candidates": 10, "timestamp": 1787997858.759093}
 {"financebench_id": "financebench_id_00678", "doc_name": "BOEING_2022_10K", "selected_chunk_ids": ["BOEING_2022_10K__p0027_c00"], "n_candidates": 10, "timestamp": 1787997873.771713}
+{"financebench_id": "financebench_id_01290", "doc_name": "BOEING_2022_10K", "selected_chunk_ids": ["BOEING_2022_10K__p0113_c00", "BOEING_2022_10K__p0114_c00", "BOEING_2022_10K__p0002_c00"], "n_candidates": 10, "timestamp": 1787997883.9506626}
+{"financebench_id": "financebench_id_00464", "doc_name": "BOEING_2022_10K", "selected_chunk_ids": ["BOEING_2022_10K__p0007_c00"], "n_candidates": 10, "timestamp": 1787997891.1396337}
+{"financebench_id": "financebench_id_00494", "doc_name": "BOEING_2022_10K", "selected_chunk_ids": ["BOEING_2022_10K__p0008_c01"], "n_candidates": 10, "timestamp": 1787997891.9292247}
+{"financebench_id": "financebench_id_00585", "doc_name": "BOEING_2022_10K", "selected_chunk_ids": ["BOEING_2022_10K__p0023_c00"], "n_candidates": 10, "timestamp": 1787997911.6031542}
+{"financebench_id": "financebench_id_03473", "doc_name": "COCACOLA_2017_10K", "selected_chunk_ids": ["COCACOLA_2017_10K__p0029_c00", "COCACOLA_2017_10K__p0105_c00"], "n_candidates": 10, "timestamp": 1787997912.4038699}
+{"financebench_id": "financebench_id_09724", "doc_name": "COCACOLA_2021_10K", "selected_chunk_ids": ["COCACOLA_2021_10K__p0061_c00"], "n_candidates": 10, "timestamp": 1787997919.338256}
+{"financebench_id": "financebench_id_06272", "doc_name": "COCACOLA_2022_10K", "selected_chunk_ids": ["COCACOLA_2022_10K__p0056_c01", "COCACOLA_2022_10K__p0062_c00"], "n_candidates": 10, "timestamp": 1787997926.157154}
+{"financebench_id": "financebench_id_10130", "doc_name": "CORNING_2020_10K", "selected_chunk_ids": ["CORNING_2020_10K__p0071_c00", "CORNING_2020_10K__p0069_c00"], "n_candidates": 10, "timestamp": 1787997934.0194666}
+{"financebench_id": "financebench_id_02981", "doc_name": "CORNING_2021_10K", "selected_chunk_ids": ["CORNING_2021_10K__p0064_c00"], "n_candidates": 10, "timestamp": 1787997939.419265}
+{"financebench_id": "financebench_id_01346", "doc_name": "CORNING_2022_10K", "selected_chunk_ids": ["CORNING_2022_10K__p0076_c00"], "n_candidates": 10, "timestamp": 1787997945.8523052}
+{"financebench_id": "financebench_id_00005", "doc_name": "CORNING_2022_10K", "selected_chunk_ids": ["CORNING_2022_10K__p0033_c01"], "n_candidates": 10, "timestamp": 1787997953.4978366}
+{"financebench_id": "financebench_id_04209", "doc_name": "COSTCO_2021_10K", "selected_chunk_ids": ["COSTCO_2021_10K__p0037_c00"], "n_candidates": 10, "timestamp": 1787997959.2129705}
+{"financebench_id": "financebench_id_05915", "doc_name": "CVSHEALTH_2018_10K", "selected_chunk_ids": ["CVSHEALTH_2018_10K__p0370_c00", "CVSHEALTH_2018_10K__p0311_c01"], "n_candidates": 10, "timestamp": 1787997966.3862832}
+{"financebench_id": "financebench_id_00790", "doc_name": "CVSHEALTH_2022_10K", "selected_chunk_ids": ["CVSHEALTH_2022_10K__p0118_c00", "CVSHEALTH_2022_10K__p0110_c00", "CVSHEALTH_2022_10K__p0088_c02"], "n_candidates": 10, "timestamp": 1787997972.1676393}
+{"financebench_id": "financebench_id_01107", "doc_name": "CVSHEALTH_2022_10K", "selected_chunk_ids": ["CVSHEALTH_2022_10K__p0174_c00", "CVSHEALTH_2022_10K__p0176_c01", "CVSHEALTH_2022_10K__p0173_c00", "CVSHEALTH_2022_10K__p0172_c01"], "n_candidates": 10, "timestamp": 1787997979.5210037}
