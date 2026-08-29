@@ -103,3 +103,18 @@
 {"financebench_id": "financebench_id_01254", "doc_name": "MGMRESORTS_2022_10K", "selected_chunk_ids": ["MGMRESORTS_2022_10K__p0046_c02", "MGMRESORTS_2022_10K__p0031_c00", "MGMRESORTS_2022_10K__p0063_c04"], "n_candidates": 10, "timestamp": 1787998244.7333953}
 {"financebench_id": "financebench_id_00382", "doc_name": "MGMRESORTS_2022Q4_EARNINGS", "selected_chunk_ids": ["MGMRESORTS_2022Q4_EARNINGS__p0012_c01"], "n_candidates": 10, "timestamp": 1787998246.8346632}
 {"financebench_id": "financebench_id_01911", "doc_name": "MGMRESORTS_2022Q4_EARNINGS", "selected_chunk_ids": ["MGMRESORTS_2022Q4_EARNINGS__p0013_c00"], "n_candidates": 10, "timestamp": 1787998253.2224386}
+{"financebench_id": "financebench_id_01912", "doc_name": "MGMRESORTS_2022Q4_EARNINGS", "selected_chunk_ids": ["MGMRESORTS_2022Q4_EARNINGS__p0012_c00", "MGMRESORTS_2022Q4_EARNINGS__p0003_c00"], "n_candidates": 10, "timestamp": 1787998276.3511121}
+{"financebench_id": "financebench_id_00407", "doc_name": "MGMRESORTS_2023Q2_10Q", "selected_chunk_ids": ["MGMRESORTS_2023Q2_10Q__p0010_c00"], "n_candidates": 10, "timestamp": 1787998279.5463107}
+{"financebench_id": "financebench_id_04700", "doc_name": "MICROSOFT_2016_10K", "selected_chunk_ids": ["MICROSOFT_2016_10K__p0093_c02"], "n_candidates": 10, "timestamp": 1787998288.9895656}
+{"financebench_id": "financebench_id_00552", "doc_name": "MICROSOFT_2023_10K", "selected_chunk_ids": ["MICROSOFT_2023_10K__p0059_c01"], "n_candidates": 10, "timestamp": 1787998291.2739055}
+{"financebench_id": "financebench_id_04458", "doc_name": "NETFLIX_2015_10K", "selected_chunk_ids": ["NETFLIX_2015_10K__p0041_c00", "NETFLIX_2015_10K__p0039_c00"], "n_candidates": 10, "timestamp": 1787998297.9724016}
+{"financebench_id": "financebench_id_03282", "doc_name": "NETFLIX_2017_10K", "selected_chunk_ids": ["NETFLIX_2017_10K__p0044_c00"], "n_candidates": 10, "timestamp": 1787998303.9269862}
+{"financebench_id": "financebench_id_04302", "doc_name": "NIKE_2018_10K", "selected_chunk_ids": ["NIKE_2018_10K__p0045_c00"], "n_candidates": 10, "timestamp": 1787998324.6233582}
+{"financebench_id": "financebench_id_03531", "doc_name": "NIKE_2019_10K", "selected_chunk_ids": ["NIKE_2019_10K__p0053_c00"], "n_candidates": 10, "timestamp": 1787998326.0788999}
+{"financebench_id": "financebench_id_04080", "doc_name": "NIKE_2021_10K", "selected_chunk_ids": ["NIKE_2021_10K__p0060_c00", "NIKE_2021_10K__p0058_c00"], "n_candidates": 10, "timestamp": 1787998332.7764168}
+{"financebench_id": "financebench_id_01163", "doc_name": "NIKE_2023_10K", "selected_chunk_ids": ["NIKE_2023_10K__p0061_c00", "NIKE_2023_10K__p0061_c01"], "n_candidates": 10, "timestamp": 1787998341.1802998}
+{"financebench_id": "financebench_id_00080", "doc_name": "PAYPAL_2022_10K", "selected_chunk_ids": ["PAYPAL_2022_10K__p0060_c00"], "n_candidates": 10, "timestamp": 1787998345.4378006}
+{"financebench_id": "financebench_id_04980", "doc_name": "PEPSICO_2021_10K", "selected_chunk_ids": ["PEPSICO_2021_10K__p0062_c01"], "n_candidates": 10, "timestamp": 1787998353.1457448}
+{"financebench_id": "financebench_id_01009", "doc_name": "PEPSICO_2022_10K", "selected_chunk_ids": ["PEPSICO_2022_10K__p0003_c01", "PEPSICO_2022_10K__p0004_c00", "PEPSICO_2022_10K__p0068_c00"], "n_candidates": 10, "timestamp": 1787998358.8769755}
+{"financebench_id": "financebench_id_00735", "doc_name": "PEPSICO_2022_10K", "selected_chunk_ids": ["PEPSICO_2022_10K__p0025_c01"], "n_candidates": 10, "timestamp": 1787998364.8370023}
+{"financebench_id": "financebench_id_01328", "doc_name": "PEPSICO_2022_10K", "selected_chunk_ids": ["PEPSICO_2022_10K__p0061_c00"], "n_candidates": 10, "timestamp": 1787998372.0420208}
