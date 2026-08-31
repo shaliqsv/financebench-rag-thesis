@@ -14,10 +14,15 @@ from pathlib import Path
 
 PRICING_PER_MILLION_TOKENS: dict[str, dict[str, float | None]] = {
     "gemini-3.5-flash": {"input": None, "output": None},
+    # standard (non-batch) paid tier, confirmed against ai.google.dev/gemini-api/docs/pricing
+    "gemini-3.1-flash-lite": {"input": 0.25, "output": 1.50},
     "deepseek-v4": {"input": None, "output": None},
     "voyage-rerank-2": {"input": None, "output": None},
     "stella-en-1.5b-v5": {"input": None, "output": None},
-    "openai/gpt-oss-120b": {"input": None, "output": None},  # judge, via Groq (free tier)
+    # judge, via Groq's free tier -- genuinely $0 (no card, rate-limited not billed).
+    # Groq's paid on-demand rate for the same model, for reference if usage ever
+    # exceeds the free tier: $0.15 input / $0.60 output per 1M tokens.
+    "openai/gpt-oss-120b": {"input": 0.0, "output": 0.0},
 }
 
 
