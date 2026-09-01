@@ -37,6 +37,7 @@ class UsageRecord:
     input_tokens: int
     output_tokens: int
     cost_usd: float | None
+    latency_sec: float | None = None  # wall-clock time of this one call, when the caller timed it
 
 
 class CostTracker:
@@ -53,6 +54,7 @@ class CostTracker:
         output_tokens: int,
         doc_name: str | None = None,
         financebench_id: int | None = None,
+        latency_sec: float | None = None,
     ) -> UsageRecord:
         prices = PRICING_PER_MILLION_TOKENS.get(model)
         cost_usd = None
@@ -69,6 +71,7 @@ class CostTracker:
             input_tokens=input_tokens,
             output_tokens=output_tokens,
             cost_usd=cost_usd,
+            latency_sec=latency_sec,
         )
         with self.log_path.open("a") as f:
             f.write(json.dumps(asdict(record)) + "\n")
