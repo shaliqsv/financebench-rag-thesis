@@ -73,3 +73,18 @@
 {"financebench_id": "financebench_id_01346", "doc_name": "CORNING_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905125.8640766}
 {"financebench_id": "financebench_id_00005", "doc_name": "CORNING_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788905125.865706}
 {"financebench_id": "financebench_id_04209", "doc_name": "COSTCO_2021_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905125.8671792}
+{"financebench_id": "financebench_id_05915", "doc_name": "CVSHEALTH_2018_10K", "score_label": "Failure to Answer", "score_method": "llm_judge", "timestamp": 1788905128.6312675}
+{"financebench_id": "financebench_id_00790", "doc_name": "CVSHEALTH_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788905128.6332445}
+{"financebench_id": "financebench_id_01107", "doc_name": "CVSHEALTH_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788905128.6349201}
+{"financebench_id": "financebench_id_01244", "doc_name": "CVSHEALTH_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905128.6365256}
+{"financebench_id": "financebench_id_00839", "doc_name": "FOOTLOCKER_2022_8K_dated_2022-08-19", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788905129.4159698}
+{"financebench_id": "financebench_id_00822", "doc_name": "FOOTLOCKER_2022_8K_dated-2022-05-20", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788905130.1127467}
+{"financebench_id": "financebench_id_04103", "doc_name": "GENERALMILLS_2019_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905130.1148345}
+{"financebench_id": "financebench_id_03471", "doc_name": "GENERALMILLS_2020_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905130.116488}
+{"financebench_id": "financebench_id_04854", "doc_name": "GENERALMILLS_2020_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905130.117998}
+{"financebench_id": "financebench_id_10136", "doc_name": "GENERALMILLS_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905130.1195796}
+{"financebench_id": "financebench_id_00956", "doc_name": "JOHNSON_JOHNSON_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788905130.136951}
+{"financebench_id": "financebench_id_00669", "doc_name": "JOHNSON_JOHNSON_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905130.1386998}
+{"financebench_id": "financebench_id_00711", "doc_name": "JOHNSON_JOHNSON_2022_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905130.1403873}
+{"financebench_id": "financebench_id_00651", "doc_name": "JOHNSON_JOHNSON_2022Q4_EARNINGS", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905130.1419225}
+{"financebench_id": "financebench_id_01484", "doc_name": "JOHNSON_JOHNSON_2022Q4_EARNINGS", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905130.1434805}
