@@ -133,3 +133,18 @@
 {"financebench_id": "financebench_id_02416", "doc_name": "PFIZER_2021_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788905170.9279091}
 {"financebench_id": "financebench_id_00283", "doc_name": "Pfizer_2023Q2_10Q", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788905170.930453}
 {"financebench_id": "financebench_id_00724", "doc_name": "Pfizer_2023Q2_10Q", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788905172.7251482}
+{"financebench_id": "financebench_id_02419", "doc_name": "Pfizer_2023Q2_10Q", "score_label": "Incorrect", "score_method": "llm_judge", "timestamp": 1788905175.4463236}
+{"financebench_id": "financebench_id_00746", "doc_name": "ULTABEAUTY_2023_10K", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788905179.1960943}
+{"financebench_id": "financebench_id_00521", "doc_name": "ULTABEAUTY_2023_10K", "score_label": "Failure to Answer", "score_method": "llm_judge", "timestamp": 1788905183.1464844}
+{"financebench_id": "financebench_id_00601", "doc_name": "ULTABEAUTY_2023Q4_EARNINGS", "score_label": "Correct", "score_method": "llm_judge", "timestamp": 1788905187.4032886}
+{"financebench_id": "financebench_id_00603", "doc_name": "ULTABEAUTY_2023Q4_EARNINGS", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905187.4058316}
+{"financebench_id": "financebench_id_00605", "doc_name": "ULTABEAUTY_2023Q4_EARNINGS", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788905187.4078243}
+{"financebench_id": "financebench_id_00606", "doc_name": "ULTABEAUTY_2023Q4_EARNINGS", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788905187.4097395}
+{"financebench_id": "financebench_id_00859", "doc_name": "VERIZON_2021_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905187.411596}
+{"financebench_id": "financebench_id_02024", "doc_name": "VERIZON_2021_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905187.4135177}
+{"financebench_id": "financebench_id_00216", "doc_name": "VERIZON_2022_10K", "score_label": "Failure to Answer", "score_method": "llm_judge", "timestamp": 1788905192.2506628}
+{"financebench_id": "financebench_id_00215", "doc_name": "VERIZON_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788905192.2529213}
+{"financebench_id": "financebench_id_00566", "doc_name": "VERIZON_2022_10K", "score_label": "Incorrect", "score_method": "deterministic", "timestamp": 1788905192.2547677}
+{"financebench_id": "financebench_id_06247", "doc_name": "WALMART_2018_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905192.2566466}
+{"financebench_id": "financebench_id_04784", "doc_name": "WALMART_2019_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905192.2584236}
+{"financebench_id": "financebench_id_06741", "doc_name": "WALMART_2020_10K", "score_label": "Correct", "score_method": "deterministic", "timestamp": 1788905192.2604825}
