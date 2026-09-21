@@ -167,7 +167,7 @@ def score_with_judge(question: str, gold_answer: str, model_answer: str, client,
     specific vendor. Returns (ScoreResult, usage) where usage has input/output token counts."""
     resp = client.chat.completions.create(
         model=model,
-        max_tokens=300,
+        max_tokens=1500,  # gpt-oss-120b is a reasoning model: its hidden reasoning counts against this budget, and 300 truncated some replies to empty/cut-off JSON
         messages=[
             {
                 "role": "user",
