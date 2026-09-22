@@ -34,9 +34,28 @@ experiments/results/*
 !experiments/results/long_context_latency.jsonl
 !experiments/results/vectorless_rag_index/
 !experiments/results/vectorless_rag_index/**
+# vectorless_rag_index_flash/ -- NOT vectorless_rag_index/ above -- is what
+# Stage 3 navigation (vectorless_rag_stage_navigation.jsonl) actually reads
+# trees from (see Stage 2b in pipelines/vectorless_rag/vectorless_rag_pipeline.ipynb).
+# Missing here means it was silently uncommittable even after a `git add`.
+!experiments/results/vectorless_rag_index_flash/
+!experiments/results/vectorless_rag_index_flash/**
 !experiments/results/vectorless_rag_stage_navigation.jsonl
 !experiments/results/vectorless_rag_stage_generation.jsonl
 !experiments/results/vectorless_rag_stage_scoring.jsonl
 !experiments/results/vectorless_rag_costs.jsonl
 !experiments/results/vectorless_rag_latency.jsonl
+# pipelines/experimental/pageindex_hybrid_pipeline.ipynb's own output
+!experiments/results/pageindex_hybrid_stage_retrieval.jsonl
+!experiments/results/pageindex_hybrid_errors.log
 .DS_Store
+!experiments/results/vectorless_rag_stage_navigation_expanded.jsonl
+!experiments/results/pageindex_hybrid_expanded_stage_retrieval.jsonl
+!experiments/results/pageindex_hybrid_expanded_stage_rerank.jsonl
+!experiments/results/pageindex_hybrid_expanded_stage_generation.jsonl
+!experiments/results/pageindex_hybrid_expanded_stage_scoring.jsonl
+!experiments/results/pageindex_hybrid_expanded_costs.jsonl
+!experiments/results/plain_rerank_direct_stage_generation.jsonl
+!experiments/results/plain_rerank_direct_stage_scoring.jsonl
+!experiments/results/plain_rerank_direct_costs.jsonl
+!experiments/results/pageindex_hybrid_expanded_latency.jsonl
