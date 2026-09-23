@@ -128,8 +128,8 @@ def clean_stage_costs(
       no_output_timestamp: ids whose output row predates this timestamp field being added
         (an old, already-saved answer) -- can't be timestamp-matched at all. If there's
         exactly one cost candidate for that id, it's unambiguous and used anyway; with
-        more than one, the most recent is used as a labeled guess (same heuristic as
-        clean_doc_level_costs) and the id is listed here so it can be spot-checked or the
+        more than one, the most recent is used as a labeled guess and the id is listed
+        here so it can be spot-checked or the
         stage re-run for a precise number instead of a guess.
     """
     by_id: dict[str, list[dict]] = {}
@@ -217,25 +217,44 @@ def dedupe_by_last(cost_records: list[dict], stage_name: str, id_field: str = "f
     return [max(v, key=lambda r: r["timestamp"]) for v in by_id.values()]
 
 
-def clean_doc_level_costs(cost_records: list[dict], stage_name: str, keep: str = "last") -> tuple[list[dict], dict]:
+def clean_doc_level_costs(
+    cost_records: list[dict], stage_name: str, keep: str = "last", session_gap_sec: float = 1800.0
+) -> tuple[list[dict], dict]:
     """For a stage keyed by doc_name, not financebench_id (e.g. tree/index building) --
     there's no per-question output file to join against, so this can't be as precise as
-    clean_stage_costs. Keeps one record per doc_name: the most recent by timestamp
-    (`keep="last"`), on the assumption a later record means a rebuild that replaced the
-    earlier one (e.g. the LLM-fallback tree rebuild for flagged documents) -- not a
-    certainty, so `ambiguous_docs` (docs that had >1 record) is returned for a manual
-    spot-check rather than silently trusted."""
+    clean_stage_costs.
+
+    Building one document's tree is *many* LLM calls (TOC detection, then one summary
+    per section), each logged as its own record -- so these can't be deduped down to one
+    record per doc the way per-question stages can; that would keep one call out of
+    dozens and badly undercount indexing cost. Instead each doc's records are grouped
+    into build sessions -- runs of calls with no gap longer than `session_gap_sec`
+    (well above the 60s rate-limit wait between calls within one build) -- and every
+    call in one session is kept: the most recent (`keep="last"`), on the assumption a
+    later session is a rebuild that replaced the earlier one. Not a certainty, so
+    `ambiguous_docs` (docs with >1 session) is returned for a manual spot-check rather
+    than silently trusted."""
     by_doc: dict[str, list[dict]] = {}
     for r in cost_records:
         if r.get("stage") == stage_name:
             by_doc.setdefault(r.get("doc_name"), []).append(r)
 
-    pick = max if keep == "last" else min
-    kept = [pick(v, key=lambda r: r["timestamp"]) for v in by_doc.values()]
+    kept, ambiguous_docs = [], []
+    for doc_name, records in by_doc.items():
+        records = sorted(records, key=lambda r: r["timestamp"])
+        sessions = [[records[0]]]
+        for prev, r in zip(records, records[1:]):
+            if r["timestamp"] - prev["timestamp"] > session_gap_sec:
+                sessions.append([])
+            sessions[-1].append(r)
+        kept += sessions[-1] if keep == "last" else sessions[0]
+        if len(sessions) > 1:
+            ambiguous_docs.append(doc_name)
+
     report = {
         "n_input": sum(len(v) for v in by_doc.values()),
         "n_kept": len(kept),
         "n_dropped_as_noise": sum(len(v) for v in by_doc.values()) - len(kept),
-        "ambiguous_docs": [d for d, v in by_doc.items() if len(v) > 1],
+        "ambiguous_docs": ambiguous_docs,
     }
     return kept, report
