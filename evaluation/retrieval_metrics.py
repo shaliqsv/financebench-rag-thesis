@@ -10,6 +10,7 @@ FinanceBench's gold annotations are pages, not chunks. Both are 0-indexed.
 
 from __future__ import annotations
 
+import math
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass, field
 
@@ -34,6 +35,35 @@ def reciprocal_rank_at_k(ranked_pages: Sequence[int], gold_pages: Iterable[int],
     return 0.0
 
 
+def ndcg_at_k(ranked_pages: Sequence[int], gold_pages: Iterable[int], k: int) -> float:
+    """NDCG@k with binary relevance (gold pages have relevance 1, all others 0).
+
+    Pages are deduplicated by first occurrence before scoring, so a page hit by
+    multiple retrieved chunks (common since these are chunk rankings collapsed
+    to page numbers) isn't credited more than once — consistent with recall_at_k
+    and reciprocal_rank_at_k, which also treat a page as a single hit or miss.
+    """
+    gold_set = set(gold_pages)
+    if not gold_set:
+        raise ValueError("gold_pages must be non-empty")
+
+    seen: set[int] = set()
+    deduped_pages = []
+    for page in ranked_pages:
+        if page not in seen:
+            seen.add(page)
+            deduped_pages.append(page)
+
+    dcg = sum(
+        1.0 / math.log2(rank + 1)
+        for rank, page in enumerate(deduped_pages[:k], start=1)
+        if page in gold_set
+    )
+    ideal_hits = min(len(gold_set), k)
+    idcg = sum(1.0 / math.log2(rank + 1) for rank in range(1, ideal_hits + 1))
+    return dcg / idcg if idcg > 0 else 0.0
+
+
 @dataclass
 class RetrievalMetrics:
     financebench_id: str
@@ -41,6 +71,7 @@ class RetrievalMetrics:
     stage: str  # e.g. "hybrid_top20" or "rerank_top10" — which pipeline stage this measures
     recall_at_k: dict[int, float] = field(default_factory=dict)
     mrr_at_k: dict[int, float] = field(default_factory=dict)
+    ndcg_at_k: dict[int, float] = field(default_factory=dict)
 
 
 def compute_retrieval_metrics(
@@ -58,6 +89,7 @@ def compute_retrieval_metrics(
         stage=stage,
         recall_at_k={k: recall_at_k(ranked_pages, gold_set, k) for k in k_values},
         mrr_at_k={k: reciprocal_rank_at_k(ranked_pages, gold_set, k) for k in k_values},
+        ndcg_at_k={k: ndcg_at_k(ranked_pages, gold_set, k) for k in k_values},
     )
 
 
@@ -72,4 +104,5 @@ def aggregate_retrieval_metrics(
         "n_questions": n,
         "recall_at_k": {k: sum(r.recall_at_k[k] for r in records) / n for k in k_values},
         "mrr_at_k": {k: sum(r.mrr_at_k[k] for r in records) / n for k in k_values},
+        "ndcg_at_k": {k: sum(r.ndcg_at_k[k] for r in records) / n for k in k_values},
     }

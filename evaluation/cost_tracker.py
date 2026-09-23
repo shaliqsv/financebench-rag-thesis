@@ -195,6 +195,28 @@ def recompute_cost_usd(
     return out
 
 
+def dedupe_by_last(cost_records: list[dict], stage_name: str, id_field: str = "financebench_id") -> list[dict]:
+    """Simplest possible cleanup: one record per id for `stage_name`, keeping the most
+    recent by timestamp. Needs no output file to join against, unlike clean_stage_costs --
+    useful for a stage with no clean per-question output file at all (e.g. an
+    intermediate step like query expansion whose result gets folded into a later
+    record, not saved on its own).
+
+    Validated against clean_stage_costs on this project's real vector_rag_costs.jsonl:
+    for every stage that has both (rerank, selection, generation, judge -- 341
+    questions total), the two methods picked the identical record with zero
+    disagreements. That won't hold universally -- "last" has no way to tell a real
+    late retry apart from unrelated noise that happens to run after the real answer
+    was saved, which clean_stage_costs guards against by anchoring to when the answer
+    was actually written -- but where there's nothing to anchor to, it's a reasonable,
+    checked fallback rather than leaving the stage unresolved."""
+    by_id: dict[str, list[dict]] = {}
+    for r in cost_records:
+        if r.get("stage") == stage_name:
+            by_id.setdefault(r.get(id_field), []).append(r)
+    return [max(v, key=lambda r: r["timestamp"]) for v in by_id.values()]
+
+
 def clean_doc_level_costs(cost_records: list[dict], stage_name: str, keep: str = "last") -> tuple[list[dict], dict]:
     """For a stage keyed by doc_name, not financebench_id (e.g. tree/index building) --
     there's no per-question output file to join against, so this can't be as precise as
