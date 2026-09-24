@@ -59,3 +59,11 @@ experiments/results/*
 !experiments/results/plain_rerank_direct_stage_scoring.jsonl
 !experiments/results/plain_rerank_direct_costs.jsonl
 !experiments/results/pageindex_hybrid_expanded_latency.jsonl
+# Stage 13 of pipelines/experimental/pageindex_hybrid_pipeline.ipynb (rerank, then filter to navigated pages)
+!experiments/results/rerank_then_filter_stage_rerank.jsonl
+!experiments/results/rerank_then_filter_stage_generation.jsonl
+!experiments/results/rerank_then_filter_stage_scoring.jsonl
+!experiments/results/rerank_then_filter_costs.jsonl
+# Re-scored with score_answer_metric_first (evaluation/rescore_metric_first.py)
+!experiments/results/vector_rag_stage_scoring_metric_first.jsonl
+!experiments/results/long_context_stage_scoring_metric_first.jsonl

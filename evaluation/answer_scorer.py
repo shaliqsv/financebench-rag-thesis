@@ -204,3 +204,30 @@ def score_answer(question: str, gold_answer: str, model_answer: str, judge_clien
             "and no judge_client was provided to fall back to the LLM judge."
         )
     return score_with_judge(question, gold_answer, model_answer, judge_client, judge_model)
+
+
+def score_answer_metric_first(
+    question: str, question_type: str, gold_answer: str, model_answer: str,
+    judge_client, judge_model: str = "openai/gpt-oss-120b",
+) -> tuple[ScoreResult, ScoreResult | None, ScoreResult | None, dict | None]:
+    """The scoring rule used for the final four-way comparison (and by the vectorless and
+    PageIndex-hybrid notebooks' own scoring cells).
+
+    Differs from score_answer above in two ways, both fixing real misgrades found on this
+    project's data:
+      - Deterministic matching only runs on `metrics-generated` questions. On descriptive
+        questions it grabs whatever number appears first -- a year, a different line item --
+        e.g. marking "Real growth was flat in FY2023" wrong by reading "2023" as the answer.
+      - A deterministic "Incorrect" isn't final: the judge re-checks it, since the matcher
+        also misreads formats like "$2,018mn" (read as 2.0).
+    So only a deterministic "Correct" skips the judge.
+
+    Returns (final, deterministic, judge, judge_usage) -- deterministic is None when it
+    didn't run or found no number, judge/judge_usage are None when the judge didn't run."""
+    det = None
+    if question_type == "metrics-generated":
+        det = score_deterministic(question, gold_answer, model_answer)
+        if det is not None and det.label == "Correct":
+            return det, det, None, None
+    judge, usage = score_with_judge(question, gold_answer, model_answer, judge_client, judge_model)
+    return judge, det, judge, usage
