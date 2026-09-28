@@ -67,3 +67,10 @@ experiments/results/*
 # Re-scored with score_answer_metric_first (evaluation/rescore_metric_first.py)
 !experiments/results/vector_rag_stage_scoring_metric_first.jsonl
 !experiments/results/long_context_stage_scoring_metric_first.jsonl
+# Structured-prompt re-runs (same prompt for all four architectures)
+!experiments/results/vector_rag_stage_generation_structured.jsonl
+!experiments/results/vector_rag_stage_scoring_structured.jsonl
+!experiments/results/vector_rag_latency_structured.jsonl
+!experiments/results/long_context_stage_generation_structured.jsonl
+!experiments/results/long_context_stage_scoring_structured.jsonl
+!experiments/results/long_context_latency_structured.jsonl
