@@ -74,3 +74,5 @@ experiments/results/*
 !experiments/results/long_context_stage_generation_structured.jsonl
 !experiments/results/long_context_stage_scoring_structured.jsonl
 !experiments/results/long_context_latency_structured.jsonl
+# Long-context per-document token counts (read by analysis/findings_walkthrough.ipynb)
+!experiments/results/long_context_token_budget.jsonl
